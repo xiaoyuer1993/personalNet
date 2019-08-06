@@ -28,6 +28,6 @@ mongoose.connect( db,{ useNewUrlParser: true })
       res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
     })
   }
-  app.listen(5000,()=>{
-    console.log('this port is 5000');
+  app.listen(2000,()=>{
+    console.log('this port is 2000');
   })
