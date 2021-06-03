@@ -22,12 +22,12 @@ mongoose.connect( db,{ useNewUrlParser: true })
   app.use('/api/messages',messages);
   app.use('/api/notes',notes);
   app.use('/api/users',users);
-  if(process.env.NODE_ENV === 'production'){
+//   if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/dist'));
     app.get('*',(req,res)=>{
       res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
     })
-  }
+//   }
   app.listen(2000,()=>{
     console.log('this port is 2000');
   })
